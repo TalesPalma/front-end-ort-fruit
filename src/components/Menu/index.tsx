@@ -1,4 +1,4 @@
-import styles from './style.module.css'
+import styles from './menu.module.css'
 export const Menu = () => {
   return (
     <div className={styles.radioInputs}>

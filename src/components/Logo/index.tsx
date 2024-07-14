@@ -1,11 +1,11 @@
-import styles from './style.module.css'
-import imageLogo from './icone.svg'
-import Image from 'next/image'
+import styles from "./logo.module.css";
+import LogoImg from "./icone.svg";
+import Image from "next/image";
 export const Logo = () => {
   return (
-    <div className={styles.container}>
-      Welcome to new era of healthcare
-      <Image className={styles.logo} src={imageLogo} alt="Logo" width={150} height={100} />
-    </div >
-  )
+    <button className={styles.btn}>
+      <Image src={LogoImg} alt="Logo" width={40} height={40} />
+    </button>
+  );
 }
+

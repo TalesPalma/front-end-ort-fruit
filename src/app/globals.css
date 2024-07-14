@@ -8,3 +8,12 @@
   font-size: 16px;
   line-height: 1.5;
 }
+
+body {
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #3FE8AB;
+}
