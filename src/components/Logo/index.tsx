@@ -4,7 +4,7 @@ import Image from "next/image";
 export const Logo = () => {
   return (
     <button className={styles.btn}>
-      <Image src={LogoImg} alt="Logo" width={40} height={40} />
+      <Image src={LogoImg} alt="Logo" width={60} height={60} className={styles.img} />
     </button>
   );
 }

@@ -1,0 +1,9 @@
+.container {
+  background: #3FE8AB;
+  height: 100vh;
+  width: 100%;
+}
+
+.container * {
+  background: none;
+}

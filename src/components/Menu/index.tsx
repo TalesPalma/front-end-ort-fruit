@@ -1,19 +1,23 @@
+import Link from 'next/link';
 import styles from './menu.module.css'
+
 export const Menu = () => {
   return (
-    <div className={styles.radioInputs}>
-      <label className={styles.radio}>
-        <input type="radio" name="radio" defaultChecked={true} />
-        <span className={styles.name}>Home</span>
-      </label>
-      <label className={styles.radio}>
-        <input type="radio" name="radio" />
-        <span className={styles.name}>Produtos</span>
-      </label>
-      <label className={styles.radio}>
-        <input type="radio" name="radio" />
-        <span className={styles.name}>Sobre</span>
-      </label>
-    </div>
-  );
+    <div className={styles.menuContainer}>
+      <Link className={styles.menuItem} href="/">
+        <label>
+          <span className={styles.menuName}>Home</span>
+        </label>
+      </Link>
+      <Link className={styles.menuItem} href="/products">
+        <label>
+          <span className={styles.menuName}>Produtos</span>
+        </label>
+      </Link>
+      <Link className={styles.menuItem} href="/about">
+        <label>
+          <span className={styles.menuName}>Sobre</span>
+        </label>
+      </Link>
+    </div>);
 }

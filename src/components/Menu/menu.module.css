@@ -1,4 +1,4 @@
-.radioInputs {
+.menuContainer {
   position: relative;
   display: flex;
   border-radius: 0.5rem;
@@ -12,11 +12,11 @@
   margin: 1px;
 }
 
-.radioInputs .radio input {
+.menuContainer .menuItem input {
   display: none;
 }
 
-.radioInputs .radio .name {
+.menuContainer .menuItem .menuName {
   display: flex;
   cursor: pointer;
   align-items: center;
@@ -25,26 +25,25 @@
   border-top-right-radius: 0.5rem;
   border: none;
   padding: 0.5rem 0.8rem;
-  /* color: ; */
   transition: all 0.15s ease-in-out;
   position: relative;
 }
 
-.radioInputs .radio input:checked+.name {
+.menuContainer .menuItem input:checked+.menuName {
   background-color: #e8e8e8;
   font-weight: 600;
 }
 
-.radioInputs .radio input+.name:hover {
+.menuContainer .menuItem input+.menuName:hover {
   color: #fff;
 }
 
-.radioInputs .radio input:checked+.name:hover {
+.menuContainer .menuItem input:checked+.menuName:hover {
   color: #1d1d29;
 }
 
-.radioInputs .radio input:checked+.name::after,
-.radioInputs .radio input:checked+.name::before {
+.menuContainer .menuItem input:checked+.menuName::after,
+.menuContainer .menuItem input:checked+.menuName::before {
   content: "";
   position: absolute;
   width: 10px;
@@ -53,13 +52,13 @@
   bottom: 0;
 }
 
-.radioInputs .radio input:checked+.name::after {
+.menuContainer .menuItem input:checked+.menuName::after {
   right: -10px;
   border-bottom-left-radius: 300px;
   box-shadow: -3px 3px 0px 3px #e8e8e8;
 }
 
-.radioInputs .radio input:checked+.name::before {
+.menuContainer .menuItem input:checked+.menuName::before {
   left: -10px;
   border-bottom-right-radius: 300px;
   box-shadow: 3px 3px 0px 3px #e8e8e8;
