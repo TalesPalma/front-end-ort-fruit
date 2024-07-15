@@ -1,41 +1,42 @@
 import { CardProduct } from '@/components/CardProduct'
 import styles from './products.module.css'
 
-export default function ProductsPage() {
+const URL = "http://127.0.0.1:8000/products"
 
-  //Ponto de conexao com a api sera recebida aqui
-  const products = [
-    {
-      id: 1,
-      name: 'Alface',
-      price: 22.5,
-      description: 'Bom para saude',
-    },
-    {
-      id: 2,
-      name: 'Batata',
-      price: 22.5,
-      description: 'Bom para saude',
-    },
-    {
-      id: 3,
-      name: 'Cebola',
-      price: 22.5,
-      description: 'Bom para saude',
-    },
-  ]
+interface Products {
+  id: number
+  name: string
+  description: string
+  price: number
+}
 
+
+const fetchProducts = async () => {
+  const response = await fetch(URL, {
+    method: "GET",
+    cache: "no-store"
+  })
+  if (!response.ok) {
+    throw new Error("Failed with fetch products in API")
+  }
+  const products: Products[] = await response.json();
+  return products
+}
+
+const ProductsPage = async () => {
+  const products = await fetchProducts()
   return (
     <div className={styles.container}>
       <h1>Produtos</h1>
+      <hr />
       <div className={styles.section}>
         {
-          products.map(products => {
+          products.map(product => {
             return <CardProduct
-              name={products.name}
-              price={products.price}
-              description={products.description}
-              key={products.id} />
+              name={product.name}
+              price={product.price}
+              description={product.description}
+              key={product.id} />
           })
         }
       </div>
@@ -43,3 +44,4 @@ export default function ProductsPage() {
   )
 }
 
+export default ProductsPage;

@@ -5,6 +5,10 @@
 }
 
 .container h1 {
+  text-align: center;
+  text-shadow: 0 0 10px #fff;
+  color: #fff;
+  font-size: 40px;
   background: none;
 }
 
