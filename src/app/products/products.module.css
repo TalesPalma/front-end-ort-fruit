@@ -4,6 +4,14 @@
   width: 100%;
 }
 
-.container * {
+.container h1 {
   background: none;
+}
+
+.section {
+  background: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
 }
